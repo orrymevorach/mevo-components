@@ -32,31 +32,4 @@ export default (props: Props) => {
       )}
     </button>
   );
-};
-
-// const Button = props => {
-//   const {
-//     children,
-//     onClick,
-//     classNames,
-//     id,
-//     disabled,
-//     isLoading,
-//   } = props;
-
-//   return (
-//     <button
-//       type="button"
-//       id={id}
-//       onClick={onClick}
-//       className={classNames}
-//       disabled={disabled}
-//     >
-//       {!isLoading && (
-//         <p>{children}</p>
-//       )}
-//     </button>
-//   );
-// };
-
-// export default Button;
+}

@@ -1,39 +1,32 @@
 {
   "name": "mevo-components",
-  "version": "0.2.3",
+  "version": "0.2.8",
   "main": "dist/index.ts",
   "module": "dist/index.js",
   "description": "A component library built by Orry for wicked fast React website development.",
-  "dependencies": {
+  "peerDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "node-sass": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "typescript": "^3.7.5"
+    "typescript": "latest",
+    "next": "latest",
+    "@types/classnames": "^2.2.9",
+    "classnames": "^2.2.6"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8"
   },
   "scripts": {
-    "build": "tsc",
-    "publish-p": "npm run build && npm publish version patch",
-    "publish-min": "npm run build && npm publish version minor",
-    "publish-maj": "npm run build && npm publish version major"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/orrymevorach/mevo-components.git"
-  },
-  "devDependencies": {
-    "@babel/cli": "latest",
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "@babel/preset-react": "latest"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
   },
   "types": "dist/index.d.ts"
 }
