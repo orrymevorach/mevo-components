@@ -1,0 +1,39 @@
+{
+  "name": "mevo-components",
+  "version": "0.2.3",
+  "main": "dist/index.ts",
+  "module": "dist/index.js",
+  "description": "A component library built by Orry for wicked fast React website development.",
+  "dependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "node-sass": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "publish-p": "npm run build && npm publish version patch",
+    "publish-min": "npm run build && npm publish version minor",
+    "publish-maj": "npm run build && npm publish version major"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orrymevorach/mevo-components.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "types": "dist/index.d.ts"
+}
