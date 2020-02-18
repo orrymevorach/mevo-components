@@ -1,6 +1,6 @@
 {
   "name": "mevo-components",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "main": "dist/index.ts",
   "module": "dist/index.js",
   "description": "A component library built by Orry for wicked fast React website development.",
