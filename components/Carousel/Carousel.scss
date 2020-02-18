@@ -1,0 +1,31 @@
+.carousel {
+  padding: 100px 0;
+  text-align: center;
+  &__header {
+    &__description {
+      font-size: 16px;
+      // color: ${props => props.theme.colors.secondary};
+      // ${props => props.theme.mixins.openSans}
+    }
+    &__heading {
+      font-size: 36px;
+      margin: 10px 0 70px;
+      // color: ${props => props.theme.colors.black};
+      // ${props => props.theme.mixins.playfair}
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        height: 2px;
+        width: 80px;
+        // background-color: ${props => props.theme.colors.secondary};
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .carouselTiles {
+    display: flex;
+  }
+}
