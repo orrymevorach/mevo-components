@@ -1,2 +1,2 @@
-import animations from './animations.module';
+import animations from './animations.module.scss';
 export default animations;
