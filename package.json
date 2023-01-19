@@ -1,33 +1,40 @@
 {
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
+  "type": "module",
   "name": "mevo-components",
-  "version": "0.3.3",
-  "main": "dist/index.ts",
-  "module": "dist/index.js",
+  "version": "0.3.5",
   "description": "A component library built by Orry for wicked fast React website development.",
-  "peerDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "node-sass": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "typescript": "latest"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "yargs": "^15.1.0"
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.2.1",
+    "@types/react": "latest",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-plugin-react": "^7.31.11",
+    "node-sass": "^8.0.0",
+    "react": "latest",
+    "rollup": "^3.9.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "latest"
   },
   "scripts": {
-    "build": "tsc"
+    "rollup": "rollup -c"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/orrymevorach/mevo-components.git"
-  },
-  "types": "dist/index.d.ts"
+  }
 }

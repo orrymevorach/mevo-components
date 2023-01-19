@@ -3,13 +3,13 @@ import CarouselTile from './CarouselTile/CarouselTile';
 import './Carousel.scss';
 
 type CarouselProps = {
-  "headingDescription": string,
-  "heading": string
-  "data": Array<object>
-}
+  headingDescription: string;
+  heading: string;
+  data: Array<object>;
+};
 
-export default (props: CarouselProps) => {
-  const { heading, headingDescription, data } = props
+export default function Carousel(props: CarouselProps) {
+  const { heading, headingDescription, data } = props;
   return (
     <div className="carousel">
       <div className="carousel__header">
@@ -27,6 +27,5 @@ export default (props: CarouselProps) => {
         ))}
       </div>
     </div>
-  )
+  );
 }
-
