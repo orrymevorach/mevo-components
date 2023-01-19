@@ -6,12 +6,13 @@
   ],
   "type": "module",
   "name": "mevo-components",
-  "version": "0.3.5",
+  "version": "0.3.9",
   "description": "A component library built by Orry for wicked fast React website development.",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.8"
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "rollup-plugin-delete": "^2.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
