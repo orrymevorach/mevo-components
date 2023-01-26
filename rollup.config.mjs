@@ -7,6 +7,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
 import scss from 'rollup-plugin-scss';
 import del from 'rollup-plugin-delete';
+import alias from '@rollup/plugin-alias';
 
 import packageJson from './package.json' assert { type: 'json' };
 
@@ -32,5 +33,11 @@ export default {
     scss(),
 
     del({ targets: 'build/*' }),
+    alias({
+      entries: [
+        { find: 'styles', replacement: './src/styles/*' },
+        { find: 'hooks', replacement: './src/hooks/*' },
+      ],
+    }),
   ],
 };

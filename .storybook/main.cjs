@@ -1,5 +1,4 @@
 const path = require('path');
-
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -8,7 +7,10 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-postcss',
   ],
-  framework: '@storybook/react',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
   webpackFinal: async (config, { configType }) => {
     // Make whatever fine-grained changes you need
     config.module.rules.push({
@@ -16,8 +18,16 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      styles: path.resolve(__dirname, '../src/styles/'),
+      hooks: path.resolve(__dirname, '../src/hooks/'),
+    };
 
     // Return the altered config
     return config;
+  },
+  docs: {
+    autodocs: true,
   },
 };
